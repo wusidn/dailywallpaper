@@ -87,13 +87,11 @@ func main() {
 		err = cmd.Run()
 		if err != nil {
 			log.Fatal(err.Error(), stderr.String())
-		} else {
-			log.Fatal(out.String())
 		}
 	})
 
 	c.OnRequest(func(r *colly.Request) {
-		fmt.Println("Visiting", r.URL)
+		// fmt.Println("Visiting", r.URL)
 	})
 
 	//发起请求
